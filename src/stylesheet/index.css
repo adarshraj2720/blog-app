@@ -1,0 +1,408 @@
+/* css Reset */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* signup-signin */
+
+
+
+.header{
+   display: flex;
+   justify-content: space-around;
+   padding: 20px 0px;
+}
+strong{
+    font-size: 28px;
+    color: #5CB85C;
+    font-weight: 800;
+}
+.nonauth-header, .auth-header{
+    display: flex;
+}
+.signupform , .signinform, .settingform{
+    /* text-align: center; */
+    width: 26%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.newpost{
+    width: 50%;
+    margin: 0 auto;
+}
+h2,h3{
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+input,textarea{
+    width: 98%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    padding-left: 16px;
+    color: gray;
+    font-size:18px ;  
+}
+textarea{
+    height: 200px;
+}
+
+input::placeholder{
+    /* padding-left: 16px; */
+    color: grey;
+    font-size: 16px;
+}
+input:focus{
+    outline: 1px solid blue;
+}
+textarea:focus{
+    outline: 1px solid blue;
+}
+
+.signupbtnblock , .signinbtnblock , .publishbtnblock , .updbtnblock{
+    display: flex;
+    justify-content: flex-end;
+}
+.signupbtn , .signinbtn , .publishbtn , .updbtn{
+    background-color: #5CB85C;
+    color: white;
+    border-radius: 4px;
+    border: 0;
+    padding: 14px 30px;
+    font-size: 18px;
+}
+.errormsg{
+    color: red;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+
+/* hero */
+.hero{
+    padding: 40px 0px;
+    background-color: #5CB85C;
+    text-align: center;
+    margin-bottom: 50px;
+}
+h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+}
+.subtitle{
+    color: white;
+    padding-top: 20px;
+    font-size:20px;
+}
+
+
+/*  */
+
+article{
+    border-top: 1px solid grey;
+    /* margin-left: 50px; */
+    /* margin-bottom: 30px; */
+}
+figure{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.userimageblock{
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;
+}
+.userimage{
+    width: 100%;
+    border-radius: 50%;
+   
+}
+.articletitle{
+    font-size: 24px;
+    font-weight: 800;
+    margin: 10px 0px;
+}
+.articledescription{
+    color: grey;
+    margin-bottom: 10px;
+}
+.homearticles{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.homearticle{
+    width: 70%;
+}
+.articletag{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+.taglist{
+    width: 20%;
+    background-color: #F3F3F3;
+    padding: 10px 20px;
+    height: 100%;
+}
+.tagbtn{
+    background-color: #818A91;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 4px 6px;
+    margin: 4px;
+    cursor: pointer;
+}
+.articletagbtn{
+    background-color: transparent;
+    color: grey;
+    border: 1px solid gray;
+    font-size: 10px;
+    cursor: default;
+    padding: 4px 10px;
+}
+.pagebtn{
+    color: #5CB85C;
+    border: 1px solid grey;
+    padding: 10px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.favcountblock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.favcount{
+    border: 1px solid #5CB85C;
+    padding: 6px 10px;
+    color: #5CB85C;
+    border-radius:4px;
+}
+.globalbtn{
+    position: relative;
+    padding-bottom: 20px;
+}
+.hastagbtn{
+    position: absolute;
+    top: 34.3%;
+    left: 480px;
+
+}
+hr{
+    margin: 20px 0px;
+}
+.logout{
+    background-color: transparent;
+    border: 2px solid  #B85C5C;
+    text-decoration: none;
+    color: #B85C5C;
+    border-radius: 4px;
+    padding: 6px;
+ 
+}
+
+
+.profileimageblock{
+    width: 100px;
+    height: 100px;
+   margin: 0 auto;
+}
+.profileimage{
+    width: 100%;
+    border-radius: 50%;
+}
+.bannerblock{
+    background-color: #F3F3F3;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+ 
+}
+.banner{
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+
+}
+.profileusername{
+    font-weight: 800;
+    font-size: 24px;
+    margin: 20px 0px;
+}
+.profilesettingbtn{
+    display: flex;
+    justify-content: flex-end;
+}
+.follow{
+    text-decoration: none;
+    border: 0;
+    background-color: transparent;
+    color: grey;
+    border: 1px solid grey;
+    padding: 4px;
+    border-radius: 4px;
+
+}
+.postsblock{
+    max-width: 1200px;
+    width: 60%;
+    margin: 0 auto;
+}
+.buttons-div{
+    max-width: 1200px;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+.arthead{
+    background-color: #333333;
+    padding: 20px 0px;
+}
+.singlearticleheading{
+   
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.singlearttitle{
+    color: white;
+    font-weight: 800;
+    font-size: 40px;
+
+}
+.artdescription{
+    padding: 20px 0px;
+    font-size: 22px;
+}
+.date{
+    color: grey;
+}
+.commentadd{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.commentform , .commentlist{
+    width: 50%;
+    margin: 0 auto;
+}
+.commentimg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.commentblock{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    align-items: center;
+    padding: 10px 4px;
+}
+.comnttextarea{
+    height: 100px;
+}
+.comntbtn{
+    background-color: #5CB85C;
+    border: 0;
+    color: white;
+    font-weight: 900;
+    padding: 4px 6px;
+  border-radius: 4px;
+}
+.commentlistimg{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.aligncenter{
+    display: flex;
+    align-items: center;
+}
+.justcenter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F3F3F3;
+    border-top: 1px solid grey;
+    padding: 10px 6px;
+}
+.commentlist{
+    border: 1px solid grey;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.commentname{
+    padding: 20px 6px;
+}
+.abc{
+    text-decoration: none;
+    color: #5CB85C;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    border-bottom: 2px solid #5CB85C;
+    
+}
