@@ -1,12 +1,11 @@
 import React from 'react';
-//import { articleURL } from '../utils/constant';
-// import Pagination from './Pagination';
+
+import Loader from './loader';
+
 import Posts from './posts';
 import { withRouter } from 'react-router';
 import Profilebanner from './profilebanner';
 
-import { NavLink } from 'react-router-dom';
-// import Loader from './Loader';
 
 class Profile extends React.Component {
   state = {
@@ -51,8 +50,8 @@ class Profile extends React.Component {
     const { activeTab } = this.setState;
     const slug = this.props.match.params.username;
     if (!this.state.articles) {
-    //   <Loader />;
-    return <h2>Loading ....</h2>
+   
+    return     <Loader />
     }
 
     return (
@@ -64,14 +63,14 @@ class Profile extends React.Component {
               <div className="buttons-div">
                 <button
                   onClick={() => this.handelActive('author')}
-                //   className={activeTab === 'author' && 'active'}
-                style={{ textDecoration: "none", color: "#5CB85C", fontSize: "16px", display: "inlne-block", paddingBottom: "20px", backgroundColor: "transparent", border: "0", cursor: "pointer",borderBottom:"2px solid green", }} 
+                  className={activeTab === 'author' && 'active'}
+                style={{ textDecoration: "none", color: "#5CB85C", fontSize: "16px", display: "inlne-block", paddingBottom: "20px", backgroundColor: "transparent", border: "0", cursor: "pointer", }} 
                 >
                   My Article
                 </button>
                 <button
                   onClick={() => this.handelActive('favorited')}
-                  style={{ textDecoration: "none", color: "#5CB85C", fontSize: "16px", display: "inlne-block", paddingBottom: "20px", backgroundColor: "transparent", border: "0", cursor: "pointer",borderBottom:"2px solid green",marginLeft:"10px" }} 
+                  style={{ textDecoration: "none", color: "#5CB85C", fontSize: "16px", display: "inlne-block", paddingBottom: "20px", backgroundColor: "transparent", border: "0", cursor: "pointer",marginLeft:"10px" }} 
                 >
                   Favorited Article
                 </button>

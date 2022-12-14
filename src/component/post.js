@@ -8,41 +8,8 @@ function Post(props) {
 
     return (
         <>
-            {/* <article className="article">
-                <header >
-                    <div >
-                        <Link to="/profile">
-                            <img src={author.image} alt={author.username} />
-                        </Link>
-                    </div>
-                    <div className="author">
-                        <Link
-                            style={{ textDecoration: 'none' }}
-                            to={`/profile/${author.username}`}
-                        >
-                            <p>{author.username}</p>
-                        </Link>
-                        <time dateTime="">
-              {moment(createdAt).format('ddd MMM D YYYY')}
-            </time>
-                    </div>
-                </header>
-                <Link style={{ textDecoration: 'none' }} to={`/article/${slug}`}>
-                    <div >
-                        <h2>{title}</h2>
-                        <p>{description}</p>
-                    </div>
-                </Link>
-                <footer>
-                    <Link
-                        style={{ textDecoration: 'none' }}
-                        to={`/article/${slug}`}
-                        
-                    >
-                        Read More ...
-                    </Link>
-                </footer>
-            </article> */}
+         
+       
 
 
 

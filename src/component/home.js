@@ -1,14 +1,15 @@
 import React from "react";
-import moment from 'moment' 
+import moment from 'moment'
+
+import Loader from "./loader";
 
 import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom'
-import Nav from "./nav";
-import Hero from "./hero";
 
 
 
-// import { Link } from "react-router-dom";
+
+
 
 
 class Home extends React.Component {
@@ -36,7 +37,6 @@ class Home extends React.Component {
             .then((res) => res.json())
             .then((data) => this.setState({ articles: data.articles, articlecount: Math.round((data.articlesCount) / 10) }))
 
-
     }
 
     render() {
@@ -47,9 +47,24 @@ class Home extends React.Component {
         }
         // console.log(nextpage)
 
+        if (this.state.articles.length===0) {
+            return (
+                <>
+                    <Loader />
+                    {/* <h2>Loading....</h2> */}
+                </>
+            )
+
+
+
+
+
+        }
         return (
+
             <>
                 {/* <Nav /> */}
+
 
 
                 {this.props.info.display === false ?
@@ -71,9 +86,9 @@ class Home extends React.Component {
                                                             {article.author.username}
                                                         </NavLink>
                                                         <p>{moment(article.createdAt).format('ddd MMM  YYYY')}</p>
-                                                       
+
                                                     </div>
-                                                   
+
                                                 </div>
                                                 <div className="favcount" >{article.favoritesCount}</div>
                                             </div>
@@ -104,14 +119,14 @@ class Home extends React.Component {
                     :
                     <div>
                         <div className="hastagbtn">
-                            <NavLink to="/"  activeClassName="abc"  exact >#{this.props.info.tag}</NavLink>
+                            <NavLink to="/" activeClassName="abc" exact >#{this.props.info.tag}</NavLink>
                         </div>
 
                         {
                             this.props.info.articles.map((article) => {
                                 return (
                                     <>
-                                         <article>
+                                        <article>
                                             <div className="favcountblock">
                                                 <div className="userimageblock">
                                                     <figure>
@@ -123,9 +138,9 @@ class Home extends React.Component {
                                                             {article.author.username}
                                                         </NavLink>
                                                         <p>{moment(article.createdAt).format('ddd MMM  YYYY')}</p>
-                                                       
+
                                                     </div>
-                                                   
+
                                                 </div>
                                                 <div className="favcount" >{article.favoritesCount}</div>
                                             </div>

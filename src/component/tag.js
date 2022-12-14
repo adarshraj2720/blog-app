@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./home";
 
+
+import Loader from "./loader";
 import Hero from "./hero";
 import { NavLink } from "react-router-dom";
 
@@ -48,6 +50,9 @@ class Tag extends React.Component {
     }
 
     render() {
+        // if(this.state.tags.length===0){
+        //     return <Loader/>
+        // }
         return (
             <>
 
@@ -62,8 +67,16 @@ class Tag extends React.Component {
                     </div>
                     <div className="taglist">
                         <small style={{ display: "block", fontWeight: "800", marginBottom: "10px" }}>Popular Tag</small>
+                        {this.state.tags.length===0 ? <Loader/>:""}
                         {
                             this.state.tags.map((tag) => {
+                                if(!this.state.tags){
+                                    return(
+                                        <>
+                                        <Loader/>
+                                        </>
+                                    )
+                                }
                                 return (
                                     <>
                                         <button className="tagbtn" onClick={(event) => { this.handleclick(event) }}>{tag}</button>
@@ -72,10 +85,7 @@ class Tag extends React.Component {
                             })
                         }
                     </div>
-
                 </div>
-
-
             </>
         )
     }

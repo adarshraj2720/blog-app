@@ -1,5 +1,5 @@
 import React from 'react';
-// import { articleURL } from '../utils/constant';
+
 import Comments from './comments';
 class Addcomment extends React.Component {
   state = {

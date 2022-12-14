@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import moment from "moment"
+import Loader from "./loader"
 
-class Singlearticle extends React.Component {
+class Singlearticle extends React.Component{
     constructor(props) {
         super(props)
         this.state = ({
@@ -52,9 +53,10 @@ class Singlearticle extends React.Component {
     render() {
         let slug = this.props.match.params.slug
         if (!this.state.slug) {
-            return <h2>Loading....</h2>
+            return <Loader/>
         }
 
+      
         return (
             <>
                 {/* <Nav /> */}
@@ -77,9 +79,10 @@ class Singlearticle extends React.Component {
                                             <Link
                                                 style={{
                                                     textDecoration: 'none',
+                                                    backgroundColor:"transparent",
                                                  
                                                 }}
-                                            // to={`/editArticle/${slug}`}
+                                            to={`/editArticle/${slug}`}
                                             >
                                                 Edit Article
                                             </Link>
@@ -97,12 +100,9 @@ class Singlearticle extends React.Component {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
                 <div className="commentadd">
-                    <p className="artdescription">{this.state.slug.description}</p>
+                    <p className="artdescription">{this.state.slug.body}</p>
                     {
                         this.state.slug.tagList.map((tag) => {
                             return (

@@ -9,6 +9,7 @@ import Setting from "./setting";
 
 import Profile from "./profile";
 import Nav from "./nav";
+import Editarticle from './editarticle'
 
 import { Switch, Route } from 'react-router-dom'
 
@@ -107,11 +108,9 @@ function AuthenticatedApp(props) {
           <Singlearticle user={props.user} />
         </Route>
         <Route path="/editArticle/:slug">
-          {/* <EditArticle user={props.user} /> */}
+          <Editarticle user={props.user} />
         </Route>
-        <Route path="*">
-          {/* <NoMatch /> */}
-        </Route>
+
       </Switch>
     );
   }
@@ -132,9 +131,7 @@ function AuthenticatedApp(props) {
         <Route path="/article/:slug">
           <Singlearticle user={props.user} />
         </Route>
-        <Route path="*">
-          {/* <NoMatch /> */}
-        </Route>
+
       </Switch>
     );
   }

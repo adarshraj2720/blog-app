@@ -73,8 +73,6 @@ class Signup extends React.Component {
                 this.props.history.push('/');
             })
             .catch((errors) => this.setState({ errors }));
-
-
     }
 
 
@@ -100,8 +98,6 @@ class Signup extends React.Component {
             </>
         )
     }
-
-
 }
 
 export default withRouter(Signup)

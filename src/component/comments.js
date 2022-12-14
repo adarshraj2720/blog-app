@@ -1,7 +1,7 @@
 import React from 'react';
-// import { articleURL } from '../utils/constant';
+
 import Comment from './comment';
-// import Loader from './Loader';
+// import Loader from './loader';
 
 class Comments extends React.Component {
   componentDidMount() {
@@ -20,7 +20,7 @@ class Comments extends React.Component {
 
   render() {
     if (!this.props.state.comment) {
-      return <h2> No Comment Added</h2>;
+      return ""
     }
     return (
       <>

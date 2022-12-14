@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Loader from './loader';
+
 import { withRouter } from 'react-router';
 // import Loader from './Loader';
 import { Link } from 'react-router-dom';
@@ -40,7 +42,7 @@ class ProfileBanner extends React.Component {
     }
 
     render() {
-        if (!this.state.profile) return <h2>Loading...</h2>
+        if (!this.state.profile) return <Loader/>
         let { username, image, bio } = this.state.profile;
         return (
             <>
