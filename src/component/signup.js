@@ -51,7 +51,7 @@ class Signup extends React.Component {
         const { username, email, password } = this.state;
         event.preventDefault()
 
-        fetch('https://mighty-oasis-08080.herokuapp.com/api/users', {
+        fetch('https://api.realworld.io/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

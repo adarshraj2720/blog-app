@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom'
 
 
+const ROOT_URL = "https://api.realworld.io/api";
 
 
 
@@ -23,7 +24,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://mighty-oasis-08080.herokuapp.com/api/articles?limit=10`)
+        fetch(`https://api.realworld.io/api/articles?limit=10`)
             .then((res) => res.json())
             .then((data) => this.setState({ articles: data.articles, articlecount: Math.round((data.articlesCount) / 10) }))
 
@@ -33,7 +34,7 @@ class Home extends React.Component {
     handlenext = (event) => {
         let page = event.target.innerText
         console.log(event.target.innerText)
-        fetch(`https://mighty-oasis-08080.herokuapp.com/api/articles?limit=10&&offset=${page * 10}`)
+        fetch(`https://api.realworld.io/api/articles?limit=10&&offset=${page * 10}`)
             .then((res) => res.json())
             .then((data) => this.setState({ articles: data.articles, articlecount: Math.round((data.articlesCount) / 10) }))
 
@@ -138,7 +139,6 @@ class Home extends React.Component {
                                                             {article.author.username}
                                                         </NavLink>
                                                         <p>{moment(article.createdAt).format('ddd MMM  YYYY')}</p>
-
                                                     </div>
 
                                                 </div>

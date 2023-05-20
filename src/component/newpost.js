@@ -25,7 +25,7 @@ class Newpost extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const { title, description, body, tagList } = this.state;
-        fetch('https://mighty-oasis-08080.herokuapp.com/api/articles', {
+        fetch('https://api.realworld.io/api/articles', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ class Editarticle extends React.Component {
 
   componentDidMount() {
     let slug = this.props.match.params.slug;
-    fetch( 'https://mighty-oasis-08080.herokuapp.com/api/articles'+'/' + slug)
+    fetch( 'https://api.realworld.io/api/articles'+'/' + slug)
       .then((res) => {
         if (!res.ok) {
           throw new Error(res.statusText);
@@ -52,7 +52,7 @@ class Editarticle extends React.Component {
     let slug = this.props.match.params.slug;
     event.preventDefault();
     const { title, description, body, tagList } = this.state;
-    fetch('https://mighty-oasis-08080.herokuapp.com/api/articles/'+'/' + slug, {
+    fetch('https://api.realworld.io/api/articles/'+'/' + slug, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

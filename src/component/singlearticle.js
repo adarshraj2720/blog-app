@@ -21,7 +21,7 @@ class Singlearticle extends React.Component{
         let slug = this.props.match.params.slug
         console.log(slug)
 
-        fetch(`https://mighty-oasis-08080.herokuapp.com/api/articles/${slug}`)
+        fetch(`https://api.realworld.io/api/articles/${slug}`)
             .then((res) => res.json())
             .then((data) => this.setState({ slug: data.article }))
     }
@@ -30,7 +30,7 @@ class Singlearticle extends React.Component{
 
 
     handelDelete = (slug) => {
-        fetch(`https://mighty-oasis-08080.herokuapp.com/api/articles` + '/' + slug, {
+        fetch(`https://api.realworld.io/api/articles` + '/' + slug, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

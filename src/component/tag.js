@@ -20,7 +20,7 @@ class Tag extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://mighty-oasis-08080.herokuapp.com/api/tags`)
+        fetch(`https://api.realworld.io/api/tags`)
             .then((res) => res.json())
             .then((data) => this.setState({ tags: data.tags }))
 
@@ -31,7 +31,7 @@ class Tag extends React.Component {
     handleclick = (event) => {
         let tags = event.target.innerText
         console.log(event.target.innerText)
-        fetch(`https://mighty-oasis-08080.herokuapp.com/api/articles/?tag=${tags}`)
+        fetch(`https://api.realworld.io/api/articles/?tag=${tags}`)
 
             .then((res) => res.json())
             .then((data) => this.setState({ articles: data.articles, tag: tags, display: true }))

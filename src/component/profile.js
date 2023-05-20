@@ -15,7 +15,7 @@ class Profile extends React.Component {
 
   FetchData = () => {
     const slug = this.props.match.params.username;
-    fetch(`https://mighty-oasis-08080.herokuapp.com/api/articles` + `/?${this.state.activeTab}=${slug}`)
+    fetch(`https://api.realworld.io/api/articles` + `/?${this.state.activeTab}=${slug}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`can not fetch deta for specific user`);

@@ -15,7 +15,7 @@ class ProfileBanner extends React.Component {
     componentDidMount() {
         let { username } = this.props;
 
-        fetch('https://mighty-oasis-08080.herokuapp.com/api/' + `profiles/${username}`, {
+        fetch('https://api.realworld.io/api/' + `profiles/${username}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -27,7 +27,7 @@ class App extends React.Component {
     componentDidMount() {
         let storageKey = localStorage['app_user'];
         if (storageKey) {
-          fetch('https://mighty-oasis-08080.herokuapp.com/api/user', {
+          fetch('https://api.realworld.io/api/user', {
             Method: 'GET',
             headers: {
               authorization: `Token ${storageKey}`,
